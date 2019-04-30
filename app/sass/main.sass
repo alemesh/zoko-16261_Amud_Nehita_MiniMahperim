@@ -1,0 +1,1052 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+//==============================================
+body
+	direction: rtl
+img
+	display: inline-block
+	max-width: 100%
+	height: auto
+	transition: .3s
+
+h1, h2, h3, h4, p, span
+	margin: 0
+	padding: 0
+	text-decoration: none
+	font-weight: normal
+	line-height: 1
+
+ul
+	margin: 0
+	padding: 0
+
+.main-holder
+	overflow: hidden
+	max-width: 1240px
+	margin: 0 auto
+	padding: 0 20px
+	position: relative
+	height: inherit
+	min-height: inherit
+.wrap-button
+	margin: 30px auto 0
+	display: flex
+	justify-content: center
+	text-align: center
+	a
+		//border: 2px solid black
+		display: flex
+		justify-content: center
+		align-items: center
+		background: #fecd0f
+		padding: 10px 10px
+		width: 140px
+		height: 50px
+		font-family: "OpenSansHebrew-Regular"
+		font-size: 16px
+		text-decoration: none
+		color: black
+		transition: .3s
+		span
+			padding-left: 20px
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translateY(-50%) rotate(-45deg)
+				width: 8px
+				height: 8px
+				border-left: 2px solid white
+				border-bottom: 2px solid white
+
+.label
+	z-index: 50
+	position: absolute
+	//padding: 15px 15px
+	left: 50%
+	bottom: 30px
+	color: #fff
+	text-transform: uppercase
+	font-size: 10px
+	transform: translateX(-50%)
+	transition: .3s
+	&:after
+		content: ''
+		position: absolute
+		left: -10px
+		top: 50%
+		transform: translateY(-50%)
+		width: 5px
+		height: 5px
+		background: #ee2b74
+		border-radius: 50%
+	&:hover
+		color: #ee2b74
+		&:after
+			background: white
+	span
+		color: #ee2b74
+		transition: .3s
+		&:hover
+			color: white
+
+.portal
+	z-index: 50
+	position: absolute
+	//padding: 15px 15px
+	left: 50%
+	bottom: 10px
+	color: #fff
+	text-transform: uppercase
+	font-size: 10px
+	transform: translateX(-50%)
+	transition: .3s
+	&:after
+		content: ''
+		position: absolute
+		left: -10px
+		top: 50%
+		transform: translateY(-50%)
+		width: 5px
+		height: 5px
+		background: #00bff3
+		border-radius: 50%
+	&:hover
+		color: #00bff3
+		&:after
+			background: white
+
+
+
+//===== clouds animation
+.cloud
+	overflow: hidden
+	position: fixed
+	width: 100%
+	height: 500px
+	background-size: cover
+.cloudcontent
+	position: relative
+	padding: 30px
+	color: #337AB7
+	font-size: 22px
+	font-weight: bold
+.cloud img
+	width: 100%
+	left: 0
+	top: 0
+	position: absolute
+	user-select: none
+	pointer-events: none
+@keyframes animCloud
+	from
+		transform: translateX(100%)
+	to
+		transform: translateX(-100%)
+.cloud .cloud1
+
+	animation: animCloud 140s infinite linear
+	width: auto
+	height: 200px
+	opacity: .5
+.cloud .cloud2
+
+	animation: animCloud 300s infinite linear
+	width: auto
+	height: 400px
+	opacity: .6
+.cloud .cloud3
+
+	animation: animCloud 500s infinite linear
+	width: auto
+	height: 250px
+	opacity: .5
+.cloud .cloud4
+
+	animation: animCloud 680s infinite linear
+	width: auto
+	height: 250px
+	opacity: .5
+
+
+//=====================================================
+.floating-button
+	font-family: "FbOgen-Bold"
+	font-size: 25px
+	line-height: 1.2
+	color: black
+	text-decoration: none
+	background: #fecd0f
+	display: flex
+	justify-content: flex-start
+	padding-right: 15px
+	align-items: center
+	width: 152px
+	height: 50px
+	position: fixed
+	bottom: 190px
+	right: 0
+	//transform: translateY(-50%)
+	transition: .2s
+	border-radius: 30px 0 0 30px
+	z-index: 99
+	cursor: pointer
+	&:hover
+		color: white
+		text-decoration: none
+		transform: scaleY(.85)
+	img
+		margin-right: 15px
+
+.wrap-header-bg
+	width: 100%
+	height: 300vh
+	background-image: url(../img/background-header.jpg)
+	background-attachment: fixed
+	background-size: cover
+	position: relative
+	overflow: hidden
+
+header
+	width: 100%
+	height: 100vh
+	//background-image: url(../img/background_new.png)
+	//background-size: cover
+	padding-top: 10px
+	position: relative
+	.main-holder
+		height: auto
+		max-width: 1500px
+	.wrap-logo
+		//margin-top: 10px
+		margin-right: 10px
+		display: flex
+		.for-details
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 20px
+			a
+				font-family: "FbOgen-Bold"
+				font-size: 18px
+				line-height: 1
+				color: white
+	.wrap-header-section
+		display: flex
+		justify-content: flex-end
+	.wrap-text
+		direction: ltr
+		color: white
+		margin-top: 270px
+		max-width: 590px
+		.wrap-img
+			margin-bottom: 60px
+		h1
+			font-family: "RobotoCondensed-Bold"
+			font-size: 101px
+			line-height: 1
+		h2
+			//font-family: "Roboto Condensed", "RobotoCondensed-Regular"
+			font-family: "RobotoCondensed-Regular"
+			font-size: 101px
+			line-height: 1
+		p
+			direction: rtl
+			text-align: center
+			font-family: "FbOgen-Regular"
+			font-size: 44px
+			line-height: 1
+			b
+				font-family: "FbOgen-Bold"
+		.scroll-button
+			a
+				font-family: "FbOgen-Bold"
+				font-size: 24px
+				line-height: 1
+				text-decoration: none
+				color: #000
+				width: 217px
+				height: 57px
+				//display: inline-block
+				background: #fecd0f
+				display: flex
+				justify-content: center
+				align-items: center
+				border: 2px solid white
+				margin-left: 142px
+				margin-top: 20px
+				transition: .2s
+				&:hover
+					border: 2px solid #fcc43b
+
+	@keyframes scroll__scroll
+		from
+
+			transform: translateY(-100%)
+		to
+			transform: translateY(100%)
+			opacity: 0
+
+	.scroll__container
+		bottom: 10px
+		left: 0
+		position: absolute
+		width: 100%
+		height: 80px
+		z-index: 10
+		display: flex
+		flex-direction: column
+		.scroll__downs
+			bottom: 0
+			height: 40px
+			left: 0
+			margin: auto
+			position: relative
+			right: 0
+			top: 0
+			width: 24px
+			cursor: pointer
+			.scroll__mousey
+				border: 2px solid #fff
+				border-radius: 13px
+				box-sizing: content-box
+				height: 18px
+				opacity: .75
+				padding: 8px
+				width: 3px
+				display: block
+				.scroll__scroller
+					animation-duration: 2.2s
+					animation-iteration-count: infinite
+					animation-name: scroll__scroll
+					animation-timing-function: cubic-bezier(.15,.41,.69,.94)
+					background-color: #fff
+					border-radius: 25%
+					height: 10px
+					width: 3px
+		.scroll__text
+			font-family: "FbOgen-Bold"
+			font-size: 18px
+			color: white
+			text-align: center
+			//margin-bottom: 30px
+
+.second-section
+	width: 100%
+	height: 200vh
+	.main-holder
+		max-width: 1500px
+	.wrap-section
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		justify-content: center
+	.wrap-button
+		a
+			width: 120px
+			height: 40px
+	.wrap-text-section
+		color: white
+		//width: 500px
+		text-align: center
+		h3
+			font-family: "FbOgen-Bold"
+			font-size: 72px
+		p
+			margin-top: 20px
+			font-family: "Assistant-Regular"
+			font-size: 25px
+			line-height: 1.2
+	.first-block
+		padding-top: 270px
+		height: 100vh
+		width: 635px
+	.second-block
+		padding-top: 130px
+		height: 100vh
+		width: 635px
+		.wrap-text-section
+			margin-bottom: 35px
+		.wrap-items
+			max-width: 400px
+			margin: 0 auto
+			.wrap-title
+				font-family: "FbOgen-Bold"
+				font-size: 25px
+				color: #fcc43b
+				text-align: center
+				position: relative
+				margin-bottom: 50px
+			.wrap-title-1
+				&:after
+					content: ''
+					position: absolute
+					left: 80px
+					top: 50%
+					width: 75px
+					height: 40px
+					border-left: 2px solid #fcc43b
+					border-top: 2px solid #fcc43b
+				&:before
+					content: ''
+					position: absolute
+					right: 80px
+					top: 50%
+					width: 75px
+					height: 40px
+					border-top: 2px solid #fcc43b
+					border-right: 2px solid #fcc43b
+			.wrap-title-2
+				margin-top: 10px
+				&:after
+					content: ''
+					position: absolute
+					left: 80px
+					bottom: 50%
+					width: 75px
+					height: 40px
+					border-left: 2px solid #fcc43b
+					border-bottom: 2px solid #fcc43b
+				&:before
+					content: ''
+					position: absolute
+					right: 80px
+					bottom: 50%
+					width: 75px
+					height: 40px
+					border-bottom: 2px solid #fcc43b
+					border-right: 2px solid #fcc43b
+
+			.items
+				list-style: none
+				display: flex
+				flex-wrap: wrap
+				justify-content: center
+				.item
+					width: 50%
+					display: flex
+					flex-direction: column
+					align-items: center
+					margin-bottom: 15px
+					.wrap-img
+						margin-bottom: 10px
+					p
+						font-family: "FbOgen-Regular"
+						font-size: 20px
+						color: white
+						line-height: 1.2
+						text-align: center
+				.circlechart
+					border-radius: 50%
+					background: rgba(110,108,108,.6)
+					display: flex
+					justify-content: center
+					align-items: center
+					border: none
+					min-height: 123px
+					transition: .3s
+				.circle-chart__info
+					direction: ltr
+					font-family: "FbOgen-Bold"
+					font-size: 18px
+					color: white
+					text-align: center
+					transform: translateY(-40%)
+					//animation: none
+					animation: circle-chart-appear 2s forwards
+@keyframes circle-chart-appear-2
+	to
+		opacity: 0
+		transform: translateY(0)
+
+
+.third-section
+	width: 100%
+	padding: 70px 0 30px
+	background-size: cover
+	//z-index: 2
+	position: relative
+	.main-holder
+		max-width: 1060px
+	.wrap-title-section
+		font-family: "FbOgen-Bold"
+		font-size: 44px
+		color: black
+		text-align: center
+		margin-bottom: 30px
+	.items
+		list-style: none
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		margin: 0 -35px
+		.item
+			width: 33.333%
+			padding: 0 35px
+			margin-bottom: 30px
+			.wrap-title
+				display: flex
+				flex-direction: column
+				align-items: center
+				//margin-bottom: 10px
+				padding-bottom: 10px
+				margin: 0 auto 10px
+				max-width: 200px
+				border-bottom: 1px solid white
+				.wrap-img
+					margin: 0 15px 10px
+					min-height: 65px
+				.wrap-text
+					text-align: center
+					p
+						text-transform: uppercase
+						text-align: center
+						line-height: 1
+						font-family: "RobotoCondensed-Bold"
+						color: black
+						font-size: 18px
+						&:last-of-type
+			.wrap-description
+				text-align: center
+				p
+					font-family: "Assistant-Regular"
+					font-size: 18px
+					color: black
+					line-height: 1.2
+	p
+		font-family: "Assistant-Regular"
+		font-size: 18px
+		color: black
+		line-height: 1.2
+
+.fifth-section
+	min-height: 580px
+	padding-bottom: 70px
+	position: relative
+	.main-holder
+		max-width: 1200px
+	.section-category-section
+		background: black
+		padding: 10px 0
+		h3
+			text-align: center
+			font-family: "FbOgen-Bold"
+			font-size: 44px
+			color: white
+	.tab-bar
+		width: 100%
+		height: 40px
+		background: #ececec
+		border-top: 1px solid #979797
+		border-bottom: 1px solid #979797
+		.tabs
+			list-style: none
+			display: flex
+			justify-content: center
+			.tab
+				//width: 100px
+				padding: 0 20px
+				display: flex
+				justify-content: center
+				align-items: center
+				font-family: "RobotoCondensed-Bold"
+				font-size: 17px
+				direction: ltr
+				text-transform: uppercase
+				transition: .3s
+				border-left: 1px solid #979797
+				border-right: 1px solid #979797
+				cursor: pointer !important
+				height: 39px
+				&:first-of-type
+					border-right: none
+				&:last-of-type
+					border-left: none
+				a
+					color: #4a4a4a
+					text-decoration: none
+			.tab.active
+				background: #4a4a4a
+				a
+					color: white
+	.tabs__content
+		padding-top: 50px
+		.wrap-content
+			font-family: "Assistant-Regular"
+			font-size: 19px
+			color: black
+
+			margin-bottom: 50px
+			min-height: 60px
+			p
+				line-height: 1.4
+		.wrap-blocks
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			.right-block
+				width: 50%
+				h3
+					font-family: "FbOgen-Bold"
+					font-size: 29px
+					color: black
+					margin-bottom: 30px
+				.items
+					list-style: none
+					display: flex
+					flex-direction: column
+					.item
+						display: flex
+						align-items: center
+						margin-bottom: 25px
+						.right-side
+							width: 50%
+							display: flex
+							align-items: center
+							.wrap-img
+								text-align: center
+								width: 60px
+								margin-left: 15px
+							.wrap-text
+								font-family: "FbOgen-Bold"
+								font-size: 22px
+								color: black
+						.left-side
+							width: 50%
+							font-family: "Assistant-Regular"
+							font-size: 17px
+							color: black
+
+
+			.left-block
+				width: 50%
+				padding-right: 70px
+				h3
+					font-family: "FbOgen-Bold"
+					font-size: 22px
+					color: black
+					min-height: 25px
+				.wrap-img
+					width: 475px
+					height: 375px
+					display: flex
+					justify-content: center
+					align-items: center
+					border-top: 2px solid #fecb2b
+					border-bottom: 2px solid #fecb2b
+		.wrap-video
+			width: 560px
+			height: 315px
+			margin: 30px auto 0
+			iframe
+				width: inherit
+				height: inherit
+				max-width: inherit
+				max-height: inherit
+
+	//tabs switcher
+	.tabs__content
+		display: none !important
+	.tabs__content.active
+		display: block !important
+
+.form-hold
+	background: #fcc43b
+	width: 100%
+	min-height: 130px
+	padding: 10px 0
+	position: relative
+	h3
+		direction: rtl
+		color: black
+		text-align: center
+		font-family: "FbOgen-Regular"
+		font-size: 30px
+		line-height: 1.1
+		margin: 0 0 20px
+
+	.form
+		margin: 0 auto
+		position: relative
+
+	.form-row-wrap
+		direction: rtl
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -8px
+		transition: opacity 0.2s ease-in-out
+
+
+
+	.form-row
+		width: 20%
+		padding: 0 8px
+		.maska-input
+			overflow: hidden
+			background-color: rgb(255, 255, 255)
+			transition: all .5s ease
+			&:hover
+				background-color: #dad8d2
+				//border-top: 2px solid red
+				text-decoration: none
+				color: #111
+	.form-grow-1
+		width: 23%
+	.form-grow-2
+		width: 23%
+	.form-grow-3
+		width: 17%
+	.form-grow-4
+		width: 20%
+
+	.checkbox-margin.form-row
+		display: flex
+		justify-content: flex-start
+		width: 100%
+
+	.check-stile
+		height: 18px
+		width: 18px
+		display: block
+		margin: 6px 0 0 7px
+
+	.form-control
+		background: transparent
+		padding: 10px
+		direction: rtl
+		display: block
+		width: 100%
+		outline: none
+		height: 40px
+		color: #adadad
+		border: none
+		font-size: 17px
+		font-family: "OpenSansHebrew-Regular"
+		line-height: 1.2
+		text-decoration: none
+
+
+	.checkbox-margin
+		margin-top: 10px
+		.checbox-form
+			color: #fff
+			font-family: "OpenSansHebrew-Regular"
+			font-size: 18px
+
+	.maska-input.btn-maska
+		background-color: black
+		&:hover
+			background-color: #4a4a4a
+			text-decoration: none
+			.btn
+				transition: .3s
+				color: white
+			.btn-txt
+				&:after
+					transition: .3s
+					border-left: 2px solid white
+					border-bottom: 2px solid white
+	.form-grow-4
+		width: 17%
+	.btn
+		position: relative
+		background: transparent
+		border-radius: 13px
+		font-family: "OpenSansHebrew-Bold"
+		color: white
+		text-align: center
+		height: 40px
+		border: none
+		outline: none
+		display: block
+		width: 100%
+		font-size: 18.64px
+		text-decoration: none
+
+	.btn-txt
+		&:after
+			content: ''
+			width: 12px
+			height: 12px
+			border-left: 3px solid white
+			border-bottom: 3px solid white
+			display: inline-block
+			vertical-align: middle
+			transform: rotate(45deg)
+			position: relative
+
+.lets-do-the-work-section
+	width: 100%
+	padding: 40px 0
+	text-align: center
+
+footer
+	width: 100%
+	background: black
+	min-height: 100px
+	position: relative
+	padding: 0 0 30px
+	.wrap-section
+		display: flex
+		justify-content: space-between
+		align-items: center
+		min-height: inherit
+		.right-side
+			font-family: "OpenSansHebrew-Regular"
+			font-size: 15px
+			color: white
+			p
+				line-height: 1.4
+			a
+				color: white
+		.left-side
+			span
+				margin-top: 10px
+				display: block
+				text-align: center
+				font-family: "FbOgen-Bold"
+				font-size: 18px
+				color: white
+
+.progress-bar
+	position: fixed
+	left: 0
+	//top: 50%
+	top: 40px
+	//transform: translateY(-50%)
+	height: calc(100vh - 40px)
+	padding: 0 15px
+	z-index: 10
+	display: flex
+	align-items: center
+	.menu_item
+		position: relative
+		height: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		a
+			position: relative
+			width: 16px
+			height: 16px
+			&:before
+				content: " "
+				background: #ddd
+				width: 2px
+				//height: calc(50% - 5px)
+				height: 14px
+				position: absolute
+				left: 7px
+				top: -13px
+			&:after
+				content: " "
+				background: #ddd
+				width: 2px
+				//height: calc(50% - 5px)
+				height: 14px
+				position: absolute
+				left: 7px
+				bottom: -13px
+			.menu-progress
+				width: inherit
+				height: inherit
+				display: flex
+				justify-content: center
+				align-items: center
+	.menu__progressCircle
+		fill: none
+		transition: fill .1s cubic-bezier(.445,.05,.55,.95)
+	.menu__progressBorder
+		stroke-width: 10px
+		stroke: #ddd
+	.menu__progressActiveBorder
+		stroke-width: 10px
+		stroke: #fc0
+	a
+		&:hover
+			.menu__progressActiveBorder
+				stroke-dashoffset: 148.652!important
+				stroke-dasharray: 239.761px, 249.761px!important
+
+
+.slick-slider
+	//direction: ltr
+	position: relative
+	display: block
+	box-sizing: border-box
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	-ms-touch-action: pan-y
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+
+	.slick-list
+		position: relative
+		overflow: hidden
+		display: block
+		margin: 0
+		padding: 0
+		width: 100%
+		transform: translate3d(0, 0, 0)
+		&:focus
+			outline: none
+		&.dragging
+			cursor: pointer
+			cursor: hand
+
+	.slick-track
+		position: relative
+		left: 0
+		top: 0
+		display: block
+		transform: translate3d(0, 0, 0)
+
+		&:before,
+		&:after
+			content: ""
+			display: table
+
+		&:after
+			clear: both
+
+	.slick-slide
+		outline: none
+		float: left
+	//height: 100%
+	//height: 400px
+	//width: 640px
+
+	.slick-arrow
+		position: absolute
+		border: none
+		outline: none
+		top: 44%
+		transform: translateY(-50%)
+		width: 55px
+		height: 55px
+		border-radius: 50%
+		//border-left: 5px solid #00b3cb
+		//border-top: 5px solid #00b3cb
+		background: #d6dbd9
+		z-index: 2
+		cursor: pointer
+
+
+	.slick-next
+		right: 10px
+		//transform: translateY(-50%) rotate(135deg)
+		&:after
+			content: ''
+			position: absolute
+			border: none
+			outline: 0
+			top: 50%
+			left: 44%
+			width: 18px
+			height: 18px
+			border-left: 3px solid black
+			border-top: 3px solid black
+			//z-index: 99999
+			transform: translateY(-50%) translateX(-50%) rotate(135deg)
+			z-index: 99999
+	.slick-prev
+		left: 10px
+		//transform: translateY(-50%) rotate(-45deg)
+		&:after
+			content: ''
+			position: absolute
+			border: none
+			outline: 0
+			top: 50%
+			left: 54%
+			width: 18px
+			height: 18px
+			border-left: 3px solid black
+			border-top: 3px solid black
+			//z-index: 99999
+			transform: translateY(-50%) translateX(-50%) rotate(-45deg)
+			z-index: 99999
+
+	.slick-arrow.slick-hidden
+		display: none
+
+	.slick-next:before, .slick-prev:before
+		content: none
+
+
+
+.thanks-page
+	header
+		.wrap-text
+			max-width: 100%
+
+
+
+
+
+
+
+@import "media"

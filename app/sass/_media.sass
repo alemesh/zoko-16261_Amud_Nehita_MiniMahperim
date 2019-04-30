@@ -1,0 +1,377 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+@media only screen and (max-width : 1500px)
+    header
+      .main-holder
+        max-width: 1240px
+        padding: 0 50px
+      .wrap-text
+        margin-top: 190px
+        h1, h2
+          font-size: 90px
+        p
+          font-size: 39px
+        .scroll-button
+          a
+            margin-left: 124px
+    .second-section
+      .main-holder
+        max-width: 1240px
+        padding: 0 50px
+      .wrap-text-section
+        h3
+          font-size: 65px
+        p
+          font-size: 22px
+      .first-block
+        padding-top: 190px
+        //width: 435px
+      .second-block
+        //padding-top: 140px
+        padding-top: 80px
+        //width: 435px
+        .wrap-items
+          .wrap-title
+            font-size: 22px
+            &:before
+              width: 100px
+              height: 35px
+              right: 70px
+            &:after
+              width: 100px
+              height: 35px
+              left: 70px
+          .items
+            .item
+              .wrap-img
+                max-width: 100px
+    .third-section
+      .wrap-title-section
+        font-size: 40px
+
+@media only screen and (max-width : 1300px)
+    .second-section
+      .second-block
+        padding-top: 40px
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+    .fifth-section
+      min-height: 520px
+      .tabs__content
+        .wrap-blocks
+          .left-block
+            padding-right: 20px
+            .wrap-img
+              width: auto
+              max-width: 375px
+              height: auto
+              max-height: 350px
+              padding: 50px 30px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+    .wrap-header-bg
+      background-image: none
+      height: auto
+    header
+      background-image: url(../img/background-header.jpg)
+      background-size: cover
+      height: 500px
+      background-position: 70% 50%
+      .main-holder
+        padding: 0 20px
+      .wrap-text
+        margin-top: 50px
+        max-width: 470px
+        h1, h2
+          font-size: 75px
+        p
+          font-size: 32px
+        .scroll-button
+          a
+            margin-left: 100px
+            height: 40px
+            width: 170px
+      .scroll__container
+        display: none
+    .second-section
+      //background-attachment: inherit
+      height: auto
+      background-image: none
+      background: #ececec
+      position: relative
+      .main-holder
+        padding: 0 20px
+      .wrap-text-section
+        color: #151312
+        h3
+          font-size: 50px
+        p
+          font-size: 20px
+      .first-block
+        height: auto
+        padding-top: 50px
+        width: auto
+        max-width: 400px
+        margin: 0 auto
+      .second-block
+        height: auto
+        padding-top: 100px
+        width: auto
+        max-width: 400px
+        margin: 0 auto
+        .wrap-items
+          .items
+            .item
+              p
+                color: #151312
+          .wrap-title
+            color: #fcc43b
+            &:before
+              width: 85px
+              right: 65px
+            &:after
+              width: 85px
+              left: 65px
+          //.wrap-title-1
+          //  &:before
+          //    border-top: 2px solid black
+          //    border-right: 2px solid black
+          //  &:after
+          //    border-left: 2px solid black
+          //    border-top: 2px solid black
+          //.wrap-title-2
+          //  &:before
+          //    border-bottom: 2px solid black
+          //    border-right: 2px solid black
+          //  &:after
+          //    border-left: 2px solid black
+          //    border-bottom: 2px solid black
+    .third-section
+      padding: 50px 0 30px
+      .wrap-title-section
+        font-size: 35px
+    .fifth-section
+      min-height: 530px
+      .tabs__content
+        .wrap-blocks
+          .right-block
+            h3
+              font-size: 25px
+            .items
+              .item
+                .right-side
+                  width: 65%
+                  padding-left: 15px
+                  .wrap-text
+                    font-size: 20px
+                .left-side
+                  width: 35%
+                  font-size: 15px
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+    .progress-bar
+      display: none
+    header
+      height: 400px
+      .wrap-text
+        max-width: 345px
+        h1, h2
+          font-size: 60px
+        p
+          font-size: 26px
+        .wrap-img
+          margin-bottom: 35px
+      .scroll-button
+        display: none
+    .second-section
+      .wrap-text-section
+        h3
+          font-size: 40px
+      .second-block
+        padding-top: 50px
+    .third-section
+      .items
+        margin: 0 -15px 30px
+        .item
+          padding: 0 15px
+          width: 100%
+          max-width: 545px
+      p
+        text-align: center
+    .fifth-section
+      .tabs__content
+        .wrap-blocks
+          max-width: 500px
+          margin: 0 auto
+          .right-block
+            width: 100%
+          .left-block
+            width: 100%
+            padding-right: 0
+        .wrap-video
+          //max-width: 500px
+          width: 420px
+          height: 240px
+    .form-hold
+      h3
+        font-size: 24px
+      .form
+        max-width: 500px
+      .form-row
+        width: 100%
+        margin-bottom: 15px
+    footer
+      padding: 30px 0 60px
+      .wrap-section
+        flex-direction: column
+        .right-side
+          order: 1
+          text-align: center
+        .left-side
+          span
+            margin-bottom: 20px
+
+@media only screen and (max-width : 480px)
+    header
+      background-image: url(../img/background-header-mobile.jpg)
+      height: 400px
+      background-position: 100% 50%
+      .wrap-text
+        margin-top: 20px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+    header
+      //height: 380px
+      //background-position: 60% 50%
+      .wrap-logo
+        //width: 160px
+        justify-content: center
+        margin-right: 0
+        a
+          width: 160px
+        .scroll-button
+          a
+            width: 160px
+            height: 42px
+            font-size: 17px
+            margin-left: 10px
+      .wrap-text
+        max-width: 265px
+        margin: 20px auto 0
+        h1, h2
+          font-size: 45px
+        p
+          font-size: 20px
+    .second-section
+      .wrap-text-section
+        h3
+          font-size: 35px
+      .second-block
+        .wrap-items
+          .items
+            .item
+              .wrap-img
+                max-width: 80px
+              p
+                font-size: 18px
+            .circlechart
+              min-height: 90px
+            .circle-chart
+              width: 90px
+              height: 90px
+          .wrap-title
+            &:before
+              width: 70px
+              right: 55px
+              height: 30px
+            &:after
+              width: 70px
+              left: 55px
+              height: 30px
+    .fifth-section
+      padding-bottom: 50px
+      .tab-bar
+        .tabs
+          .tab
+            padding: 0 12px
+      .tabs__content
+        .wrap-blocks
+          .right-block
+            .items
+              .item
+                .right-side
+                  .wrap-img
+                    width: 50px
+          .left-block
+            padding-right: 0
+        .wrap-video
+          width: 320px
+          height: 185px
+    .form-hold
+      h3
+        span
+          display: block
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+    header
+      .wrap-logo
+        .scroll-button
+          a
+            width: 146px
+            height: 38px
+            margin-right: 10px
+    .second-section
+      .second-block
+        .wrap-items
+          .wrap-title
+            &:before
+              width: 55px
+              right: 45px
+            &:after
+              width: 55px
+              left: 45px
+    .fifth-section
+      .tabs__content
+        .wrap-video
+          width: 275px
+          height: 155px
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
